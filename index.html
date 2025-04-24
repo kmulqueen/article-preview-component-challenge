@@ -1,36 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Article preview about home furniture decoration tips"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Article preview component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <body>
+    <main>
+      <article class="article">
+        <figure class="article__figure">
+          <img
+            src="./images/drawers.jpg"
+            alt="Green dresser with pictures and a plant on top of it."
+            class="article__img"
+          />
+        </figure>
 
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
+        <div class="article__content">
+          <header>
+            <h1 class="article__content-title">
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+            </h1>
+          </header>
+          <p class="article__content-description">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I've got some simple tips to help
+            you make any room feel complete.
+          </p>
+        </div>
 
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
+        <footer class="article__author">
+          <img
+            src="./images/avatar-michelle.jpg"
+            alt="Michelle Appleton"
+            class="article__author-img"
+          />
+          <div class="author-details">
+            <p class="article__author-name">
+              <strong>Michelle Appleton</strong>
+            </p>
+            <time datetime="2020-06-28" class="article__author-date"
+              >28 Jun 2020</time
+            >
+          </div>
+          <button aria-label="Share this article" class="share-button">
+            <img
+              src="./images/icon-share.svg"
+              alt=""
+              class="icon icon--share"
+            />
+          </button>
+        </footer>
 
-  Michelle Appleton
-  28 Jun 2020
+        <aside class="share-toast" aria-hidden="true">
+          <span class="share-toast__text">Share</span>
+          <ul class="share-links">
+            <li>
+              <a href="#" aria-label="Share on Facebook">
+                <img
+                  src="./images/icon-facebook.svg"
+                  alt=""
+                  class="icon share-toast__icon icon--facebook"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Share on Twitter">
+                <img
+                  src="./images/icon-twitter.svg"
+                  alt=""
+                  class="icon share-toast__icon icon--twitter"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Share on Pinterest">
+                <img
+                  src="./images/icon-pinterest.svg"
+                  alt=""
+                  class="icon share-toast__icon icon--pinterest"
+                />
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </article>
+    </main>
 
-  Share
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://www.github.com/kmulqueen">Kyle Mulqueen</a>.
+    </footer>
+  </body>
 </html>

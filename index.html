@@ -21,6 +21,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
 
     <title>Frontend Mentor | Article preview component</title>
   </head>
@@ -49,7 +50,7 @@
           </p>
         </div>
 
-        <footer class="article__author">
+        <footer class="article__author" id="article-author">
           <div class="author-details">
             <img
               src="./images/avatar-michelle.jpg"
@@ -63,7 +64,12 @@
               >28 Jun 2020</time
             >
           </div>
-          <button aria-label="Share this article" class="share-button">
+          <button
+            aria-label="Share this article"
+            class="share-button"
+            id="share-button-author"
+            title="Show share links"
+          >
             <svg
               class="icon icon--share"
               xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +82,7 @@
           </button>
         </footer>
 
-        <aside class="share-toast" aria-hidden="true">
+        <aside class="share-toast hidden" id="share-toast" aria-hidden="true">
           <div class="share-toast__content">
             <span class="share-toast__text">Share</span>
             <ul class="share-links">
@@ -110,8 +116,10 @@
             </ul>
           </div>
           <button
-            aria-label="Share this article"
+            aria-label="Close share links"
             class="share-button share-button--dark"
+            id="share-button-toast"
+            title="Hide share links"
           >
             <svg
               class="icon icon--share"

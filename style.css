@@ -149,13 +149,46 @@ p {
   cursor: pointer;
 }
 
+.share-button--dark {
+  background-color: var(--clr-grey-500);
+}
+
+.share-button--dark > svg {
+  fill: var(--clr-white);
+}
+
 .share-toast {
-  display: none;
+  /* display: none; */
+  display: flex;
+  background-color: var(--clr-grey-900);
+  color: var(--clr-grey-400);
+  height: calc(100% + 0.025rem);
+  margin-top: var(--spc-400);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spc-200) var(--spc-400);
+}
+
+.share-toast__content {
+  display: flex;
+  gap: var(--spc-200);
+}
+
+.share-toast__text {
+  text-transform: uppercase;
+  letter-spacing: var(--ls-900);
+}
+
+.share-links {
+  list-style: none;
+  display: flex;
+  gap: var(--spc-200);
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding: var(--spc-200);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);

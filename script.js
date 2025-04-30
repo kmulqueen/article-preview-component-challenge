@@ -11,12 +11,18 @@ function toggleShareToast() {
   const isHidden = toastSection.classList.contains("hidden");
   toastSection.setAttribute("aria-hidden", isHidden);
 
+  if (isHidden) {
+    document.activeElement.blur();
+  }
+
   // Handle mobile layout - toggle author section visibility
-  const maxMobileSize = 768;
+  const maxMobileSize = 700;
   const deviceWidth = window.innerWidth;
 
   if (deviceWidth < maxMobileSize) {
     authorSection.classList.toggle("hidden");
+  } else {
+    shareBtnToast.classList.toggle("hidden");
   }
 }
 

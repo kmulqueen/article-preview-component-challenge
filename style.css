@@ -208,7 +208,7 @@ p {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .article {
     grid:
       "img title" auto
@@ -225,6 +225,8 @@ p {
 
   .article__img {
     height: 100%;
+    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 0.625rem;
   }
 
   body {
@@ -239,6 +241,11 @@ p {
 
   header {
     grid-area: title;
+  }
+
+  .article {
+    position: relative;
+    overflow: visible;
   }
 
   .article__title {
@@ -256,5 +263,38 @@ p {
     margin-top: var(--spc-300);
     padding: 0 var(--spc-600) var(--spc-600) var(--spc-400);
     justify-content: space-between;
+  }
+
+  .share-toast {
+    position: absolute;
+    right: -9.5%;
+    bottom: var(--spc-1300);
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 0px 10px 10px 0px #c0d5e1;
+  }
+
+  .share-toast::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 46%;
+
+    /* Create triangle with CSS borders */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--clr-grey-900);
+  }
+}
+
+@media (min-width: 1200px) {
+  .article {
+    max-width: 46rem;
+  }
+
+  .share-toast {
+    right: -8%;
   }
 }
